@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     let bottomCaptionChoices = [
         CaptionOption(emoji: "🐱", caption: "Cats wearing hats."),
         CaptionOption(emoji: "🐕", caption: "Dogs carrying logs."),
-        CaptionOption(emoji: "🐒", caption: "Monkeys being funky.")
+        CaptionOption(emoji: "🐒", caption: "Monkeys being funky."),
     ]
 
     @IBOutlet weak var topSegmentedControl: UISegmentedControl!
@@ -31,7 +31,12 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        topSegmentedControl.removeAllSegments()
+        for choice in topCaptionChoices {
+            topSegmentedControl.insertSegment(withTitle: choice.emoji, at: topCaptionChoices.count, animated: false)
+        }
+        topSegmentedControl.selectedSegmentIndex = 0
     }
 }
 
