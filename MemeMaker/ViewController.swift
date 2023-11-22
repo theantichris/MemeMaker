@@ -31,9 +31,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dragTopLabel(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .changed {
+            topCaptionLabel.center = sender.location(in: view)
+        }
     }
     
     @IBAction func dragBottomLabel(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .changed {
+            bottomCaptionLabel.center = sender.location(in: view)
+        }
     }
     
     override func viewDidLoad() {
