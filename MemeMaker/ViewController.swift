@@ -37,6 +37,12 @@ class ViewController: UIViewController {
             topSegmentedControl.insertSegment(withTitle: choice.emoji, at: topCaptionChoices.count, animated: false)
         }
         topSegmentedControl.selectedSegmentIndex = 0
+        
+        bottomSegmentedControl.removeAllSegments()
+        for choice in bottomCaptionChoices {
+            bottomSegmentedControl.insertSegment(withTitle: choice.emoji, at: bottomCaptionChoices.count, animated: false)
+        }
+        bottomSegmentedControl.selectedSegmentIndex = 0
     }
 }
 
