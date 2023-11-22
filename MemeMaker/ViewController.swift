@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     ]
     
     let bottomCaptionChoices = [
-        CaptionOption(emoji: "🐱", caption: "Cats wearing hats."),
+        CaptionOption(emoji: "🐈", caption: "Cats wearing hats."),
         CaptionOption(emoji: "🐕", caption: "Dogs carrying logs."),
         CaptionOption(emoji: "🐒", caption: "Monkeys being funky."),
     ]
@@ -29,10 +29,20 @@ class ViewController: UIViewController {
     @IBAction func segmentedControlChanged(_ sender: Any) {
         setCaptions()
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initializeSegmentedControls()
+        setCaptions()
+    }
+    
+    func setCaptions() {
+        topCaptionLabel.text = topCaptionChoices[topSegmentedControl.selectedSegmentIndex].caption
+        bottomCaptionLabel.text = bottomCaptionChoices[bottomSegmentedControl.selectedSegmentIndex].caption
+    }
+    
+    func initializeSegmentedControls() {
         topSegmentedControl.removeAllSegments()
         for choice in topCaptionChoices {
             topSegmentedControl.insertSegment(withTitle: choice.emoji, at: topCaptionChoices.count, animated: false)
@@ -44,13 +54,6 @@ class ViewController: UIViewController {
             bottomSegmentedControl.insertSegment(withTitle: choice.emoji, at: bottomCaptionChoices.count, animated: false)
         }
         bottomSegmentedControl.selectedSegmentIndex = 0
-        
-        setCaptions()
-    }
-    
-    func setCaptions() {
-        topCaptionLabel.text = topCaptionChoices[topSegmentedControl.selectedSegmentIndex].caption
-        bottomCaptionLabel.text = bottomCaptionChoices[bottomSegmentedControl.selectedSegmentIndex].caption
     }
 }
 
