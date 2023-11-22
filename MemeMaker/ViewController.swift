@@ -30,6 +30,12 @@ class ViewController: UIViewController {
         setCaptions()
     }
     
+    @IBAction func dragTopLabel(_ sender: UIPanGestureRecognizer) {
+    }
+    
+    @IBAction func dragBottomLabel(_ sender: UIPanGestureRecognizer) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
