@@ -13,6 +13,7 @@
 		C12201922B0E484D000B81E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12201902B0E484D000B81E1 /* Main.storyboard */; };
 		C12201942B0E484E000B81E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C12201932B0E484E000B81E1 /* Assets.xcassets */; };
 		C12201972B0E484E000B81E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12201952B0E484E000B81E1 /* LaunchScreen.storyboard */; };
+		C122019F2B0E50D7000B81E1 /* CaptionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C122019E2B0E50D7000B81E1 /* CaptionOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C12201932B0E484E000B81E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C12201962B0E484E000B81E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C12201982B0E484E000B81E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C122019E2B0E50D7000B81E1 /* CaptionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C12201932B0E484E000B81E1 /* Assets.xcassets */,
 				C12201952B0E484E000B81E1 /* LaunchScreen.storyboard */,
 				C12201982B0E484E000B81E1 /* Info.plist */,
+				C122019E2B0E50D7000B81E1 /* CaptionOption.swift */,
 			);
 			path = MemeMaker;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C122018F2B0E484D000B81E1 /* ViewController.swift in Sources */,
+				C122019F2B0E50D7000B81E1 /* CaptionOption.swift in Sources */,
 				C122018B2B0E484D000B81E1 /* AppDelegate.swift in Sources */,
 				C122018D2B0E484D000B81E1 /* SceneDelegate.swift in Sources */,
 			);
