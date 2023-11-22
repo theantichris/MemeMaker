@@ -24,9 +24,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var topCaptionLabel: UILabel!
-    @IBOutlet weak var bottomCaptionLabel: UISegmentedControl!
+    @IBOutlet weak var bottomCaptionLabel: UILabel!
     
     @IBAction func segmentedControlChanged(_ sender: Any) {
+        setCaptions()
     }
         
     override func viewDidLoad() {
@@ -43,6 +44,13 @@ class ViewController: UIViewController {
             bottomSegmentedControl.insertSegment(withTitle: choice.emoji, at: bottomCaptionChoices.count, animated: false)
         }
         bottomSegmentedControl.selectedSegmentIndex = 0
+        
+        setCaptions()
+    }
+    
+    func setCaptions() {
+        topCaptionLabel.text = topCaptionChoices[topSegmentedControl.selectedSegmentIndex].caption
+        bottomCaptionLabel.text = bottomCaptionChoices[bottomSegmentedControl.selectedSegmentIndex].caption
     }
 }
 
